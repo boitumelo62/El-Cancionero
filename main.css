@@ -21,13 +21,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(230, 214, 214);
 }
 
 button {
   font-size: 2rem;
   padding: 15px 30px;
-  background-color: #f35333;
+  background-color: #b14b37;
   color: #fff;
   border: none;
   cursor: pointer;

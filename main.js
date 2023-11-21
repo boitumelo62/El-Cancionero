@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   playButton.addEventListener("click", function () {
     home.style.display = "none";
     main.style.display = "block";
-    siteHeader.style.display = "block"; // Show the header on play
+    siteHeader.style.display = "block";
     audio.play();
     playPauseButton.textContent = "PAUSE";
     autoScroll();
@@ -39,17 +39,47 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       currentH1Index++;
+
+      // console.log(currentH1Index);
+
       if (currentH1Index >= h1Elements.length) {
-        currentH1Index = 0; // Reset to the first H1
+        currentH1Index = 0;
       }
-    }, audio.duration * 10); // Adjust based on your song duration
+    }, audio.duration * 10);
+
+    // everytime an h1 tag comes into view, chnage its color to red
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          //entry.target.style.color = "red";
+          // entry.target.classList.toggle("active");
+          const word = entry.target.innerHTML;
+
+          // find the index in h1Elements where word is the same
+          const index = Array.from(h1Elements).findIndex(
+            (h1) => h1.innerHTML === word
+          );
+          /* 
+          console.log(
+            "we got an h1",
+            entry.target.innerHTML,
+            index,
+            h1Elements[index].innerHTML
+          ); */
+
+          currentH1Index = index;
+        }
+      });
+    });
+
+    h1Elements.forEach((h1) => {
+      observer.observe(h1);
+    });
   }
 
   function stopAutoScroll() {
     clearInterval(scrollInterval);
   }
 
-  main.addEventListener("animationend", function () {
-    // Add your transition animations here
-  });
+  main.addEventListener("animationend", function () {});
 });

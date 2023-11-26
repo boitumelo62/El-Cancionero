@@ -45,7 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentH1Index >= h1Elements.length) {
         currentH1Index = 0;
       }
-    }, audio.duration * 10);
+
+      const currentH1Color = getComputedStyle(h1Elements[currentH1Index]).color;
+      playPauseButton.style.backgroundColor = currentH1Color;
+    }, audio.duration * 8);
 
     // everytime an h1 tag comes into view, chnage its color to red
     const observer = new IntersectionObserver((entries) => {
@@ -68,6 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
           ); */
 
           currentH1Index = index;
+
+          const currentH1Color = getComputedStyle(h1Elements[index]).color;
+          playPauseButton.style.backgroundColor = currentH1Color;
         }
       });
     });

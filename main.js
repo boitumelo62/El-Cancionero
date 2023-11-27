@@ -40,35 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       currentH1Index++;
 
-      // console.log(currentH1Index);
-
       if (currentH1Index >= h1Elements.length) {
         currentH1Index = 0;
       }
+    }, audio.duration * 6);
 
-      const currentH1Color = getComputedStyle(h1Elements[currentH1Index]).color;
-      playPauseButton.style.backgroundColor = currentH1Color;
-    }, audio.duration * 8);
-
-    // everytime an h1 tag comes into view, chnage its color to red
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          //entry.target.style.color = "red";
-          // entry.target.classList.toggle("active");
           const word = entry.target.innerHTML;
-
-          // find the index in h1Elements where word is the same
           const index = Array.from(h1Elements).findIndex(
             (h1) => h1.innerHTML === word
           );
-          /* 
-          console.log(
-            "we got an h1",
-            entry.target.innerHTML,
-            index,
-            h1Elements[index].innerHTML
-          ); */
 
           currentH1Index = index;
 
@@ -85,7 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function stopAutoScroll() {
     clearInterval(scrollInterval);
+    const observer = new IntersectionObserver(() => {});
+    h1Elements.forEach((h1) => {
+      observer.unobserve(h1);
+    });
   }
-
-  main.addEventListener("animationend", function () {});
 });

@@ -57,88 +57,50 @@ section {
   padding-top: 2.5vh;
 }
 
-#one {
+section {
   border: 2.5vh solid;
+  background-size: cover;
+}
+
+#one {
   border-color: #f6c3b8;
   background-image: url("images/childhood.jpg");
-  background-size: cover;
   color: #f6c3b8;
 }
 
 #two {
-  border: 2.5vh solid;
   border-color: #e1816b;
   background-image: url("images/cartoons 3.jpg");
-  background-size: cover;
   color: #e1816b;
 }
 
 #three {
-  border: 2.5vh solid;
   border-color: rgb(233, 197, 152);
   background-image: url("images/nostalgia.jpg");
-  background-size: cover;
   color: rgb(233, 197, 152);
 }
 
 #four {
-  border: 2.5vh solid;
   border-color: #cc446a;
   background-image: url("images/morings.jpg");
-  background-size: cover;
   color: #cc446a;
 }
 
 #five {
-  border: 2.5vh solid;
   border-color: #6b929c;
   background-image: url("images/cereal (2).jpg");
-  background-size: cover;
   color: #6b929c;
 }
 
 #six {
-  border: 2.5vh solid;
   border-color: #1b2224;
   background-image: url("images/weekends.jpg");
-  background-size: cover;
   color: #1b2224;
 }
 
 #seven {
-  border: 2.5vh solid;
   border-color: rgb(148, 130, 119);
   background-image: url("images/b_w.jpg");
-  background-size: cover;
   background-position: center;
   color: rgb(148, 130, 119);
 }
-
-/*.color-childhood {
-  background-color: #f6c3b8;
-}
-
-.color-cartoons {
-  background-color: #e1816b;
-}
-
-.color-nostalgia {
-  background-color: rgb(233, 197, 152);
-}
-
-.color-cereal {
-  background-color: #cc446a;
-}
-
-.color-mornings {
-  background-color: #6b929c;
-}
-
-.color-weekends {
-  background-color: #1b2224;
-}
-
-.color-bw {
-  background-color: rgb(148, 130, 119);
-}
-*/

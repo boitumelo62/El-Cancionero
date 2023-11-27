@@ -15,6 +15,9 @@ body {
   display: none;
 }
 #home {
+  background-image: url(images/home.jpg);
+  background-size: cover;
+  background-position: top;
   height: 100vh;
   display: flex;
   align-items: center;

@@ -70,7 +70,7 @@ section {
 
 #two {
   border-color: #e1816b;
-  background-image: url("images/cartoons 3.jpg");
+  background-image: url("images/cartoons.jpg");
   color: #e1816b;
 }
 
@@ -82,13 +82,13 @@ section {
 
 #four {
   border-color: #cc446a;
-  background-image: url("images/morings.jpg");
+  background-image: url("images/cereal.jpg");
   color: #cc446a;
 }
 
 #five {
   border-color: #6b929c;
-  background-image: url("images/cereal (2).jpg");
+  background-image: url("images/mornings.jpg");
   color: #6b929c;
 }
 

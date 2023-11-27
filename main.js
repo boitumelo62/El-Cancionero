@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const playButton = document.getElementById("playButton");
   const playPauseButton = document.getElementById("playPauseButton");
   const siteHeader = document.getElementById("siteHeader");
-
   let currentH1Index = 0;
   let scrollInterval;
-
   playButton.addEventListener("click", function () {
     home.style.display = "none";
     main.style.display = "block";
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     playPauseButton.textContent = "PAUSE";
     autoScroll();
   });
-
   playPauseButton.addEventListener("click", function () {
     if (audio.paused) {
       audio.play();
@@ -29,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
       stopAutoScroll();
     }
   });
-
   function autoScroll() {
     scrollInterval = setInterval(function () {
       main.scrollTo({
@@ -45,10 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentH1Index >= h1Elements.length) {
         currentH1Index = 0;
       }
-
-      const currentH1Color = getComputedStyle(h1Elements[currentH1Index]).color;
-      playPauseButton.style.backgroundColor = currentH1Color;
-    }, audio.duration * 8);
+    }, audio.duration * 6);
 
     // everytime an h1 tag comes into view, chnage its color to red
     const observer = new IntersectionObserver((entries) => {
@@ -71,9 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
           ); */
 
           currentH1Index = index;
-
-          const currentH1Color = getComputedStyle(h1Elements[index]).color;
-          playPauseButton.style.backgroundColor = currentH1Color;
         }
       });
     });

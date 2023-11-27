@@ -1,10 +1,10 @@
 body {
+  background-color: #000000;
   color: #fff;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   scroll-behavior: smooth;
 }
-
 #siteHeader {
   position: fixed;
   top: 0;
@@ -14,11 +14,7 @@ body {
   text-align: center;
   display: none;
 }
-
 #home {
-  background-image: url(images/home.jpg);
-  background-size: cover;
-  background-position: bottom;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -34,82 +30,62 @@ button {
   border: none;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #0e0508;
 }
-
 main {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   display: none;
 }
-
 section {
+  background-color: #862525;
   margin: 0;
-  width: 96.5%;
-  height: 92.6%;
+  width: 100%;
+  height: 100vh;
   display: grid;
   place-items: center;
-  font-size: 4rem;
+  font-size: 5rem;
   scroll-snap-align: start;
-  padding-top: 2.5vh;
 }
-
+section:nth-child(2n) {
+  background-color: white;
+}
 #one {
-  border: 2.5vh solid;
-  border-color: #f6c3b8;
   background-image: url("images/childhood.jpg");
   background-size: cover;
   color: #f6c3b8;
+  font-size: 5rem;
 }
-
 #two {
-  border: 2.5vh solid;
-  border-color: #e1816b;
   background-image: url("images/cartoons 3.jpg");
   background-size: cover;
   color: #e1816b;
 }
-
 #three {
-  border: 2.5vh solid;
-  border-color: rgb(233, 197, 152);
   background-image: url("images/nostalgia.jpg");
   background-size: cover;
-  color: rgb(233, 197, 152);
+  color: rgba(233, 196, 152, 0.856);
 }
-
 #four {
-  border: 2.5vh solid;
-  border-color: #cc446a;
   background-image: url("images/morings.jpg");
   background-size: cover;
   color: #cc446a;
 }
-
 #five {
-  border: 2.5vh solid;
-  border-color: #6b929c;
   background-image: url("images/cereal (2).jpg");
   background-size: cover;
   color: #6b929c;
 }
-
 #six {
-  border: 2.5vh solid;
-  border-color: #1b2224;
   background-image: url("images/weekends.jpg");
   background-size: cover;
   color: #1b2224;
 }
-
 #seven {
-  border: 2.5vh solid;
-  border-color: rgb(148, 130, 119);
   background-image: url("images/b_w.jpg");
   background-size: cover;
   background-position: center;
-  color: rgb(148, 130, 119);
+  color: rgb(189, 179, 189);
 }
